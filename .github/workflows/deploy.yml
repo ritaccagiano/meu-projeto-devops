@@ -1,0 +1,21 @@
+name: Deploy página HTML
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Checkout do código
+       uses: actions/checkout@v4
+
+      -name: Publicar página no Github Pages
+       uses: peaceiris/actions-gh-pages@v4
+       with:
+         giyhub-token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ./
+         
