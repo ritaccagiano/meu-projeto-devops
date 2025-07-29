@@ -16,6 +16,6 @@ jobs:
       -name: Publicar página no Github Pages
        uses: peaceiris/actions-gh-pages@v4
        with:
-         giyhub-token: ${{ secrets.GITHUB_TOKEN }}
+         github-token: ${{ secrets.GITHUB_TOKEN }}
          publish_dir: ./
          
